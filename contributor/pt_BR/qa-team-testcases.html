@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Trabalhando com casos de teste</title>
+    <link rel="stylesheet" type="text/css" href="../../libs-common/css/style.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+    <link rel="home" href="index.html" title="Documentação de colaborador do Xubuntu" />
+    <link rel="up" href="qa.html" title="Capítulo 4. Quality Assurance (QA)" />
+    <link rel="prev" href="qa-team-trackers.html" title="Trabalhando com rastreadores" />
+    <link rel="next" href="qa-team-communication.html" title="Comunicação com Testadores e Usuários" />
+    <link rel="copyright" href="credits-license.html" title="Créditos e Licença" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="shortcut icon" href="../../libs-common/images/favicon.png" />
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="stylesheet" href="../../libs-common/css/style-resp-950.css" media="only screen and (max-width:950px)" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="stylesheet" href="../../libs-common/css/style-resp-400.css" media="only screen and (max-width:400px)" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" id="masthead">
+      <a href="index.html">
+        <img src="../../libs-common/images/logo.png" alt="Xubuntu" />
+      </a>
+    </div>
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="qa-team-testcases"></a>Trabalhando com casos de teste</h2>
+          </div>
+        </div>
+      </div>
+      <p>Informação sobre o método básico de trabalhar com casos de testes pode ser encontrada no manual de casos de testes <a class="ulink" href="https://wiki.ubuntu.com/QATeam/ContributingTestcases/Manual" target="_top">na página da Equipe de controle de qualidade do Ubuntu</a>.</p>
+      <p><span class="emphasis"><em>Nós</em></span>estamos apenas preocupados com um conjunto específico de tarefas: puxando a branch,fazendo edições e então enviando as mudanças que precisamos para a branch principal. Nós temos pessoas na equipe de Administradores de Casos de Teste para os casos de testes LP,  além disso qualquer membro da nossa equipe de lançamento pode editar o rastreador, isso ajuda a garantir que alterações sejam movidas aos rastreadores rapidamente.</p>
+      <p>Para editar um caso de teste:</p>
+      <div class="itemizedlist">
+        <ul class="itemizedlist" style="list-style-type: disc; ">
+          <li class="listitem">
+            <p><a class="ulink" href="https://bugs.launchpad.net/ubuntu-manual-tests/+filebug" target="_top">Relatar</a>a alteração requerida como um bug contra o projeto de caso de teste</p>
+          </li>
+          <li class="listitem">
+            <p>Atribua-se ao bug</p>
+          </li>
+          <li class="listitem">
+            <p>Criar uma branch local: <strong class="userinput"><code>bzr branch lp:ubuntu-manual-tests</code></strong></p>
+          </li>
+          <li class="listitem">
+            <p>Faça alterações no caso de teste em sua branch local</p>
+          </li>
+          <li class="listitem">
+            <p>Enviar as alterações: <strong class="userinput"><code>bzr commit -m "Fix LP bug #BUGNO."</code></strong></p>
+          </li>
+          <li class="listitem">
+            <p>Enviar a uma branch remota pessoal: <strong class="userinput"><code>bzr push lp:~username/ubuntu-manual-tests/bug-BUGNO</code></strong></p>
+          </li>
+        </ul>
+      </div>
+      <p>Uma vez enviada a uma branch remota pessoal, propor uma alteração para mesclagem - <a class="xref" href="bzr-merge-proposal.html">Enviando propostas de mesclagem</a>.</p>
+      <p>Responda á quaisquer solicitações para alterações quando pedidas pelos administradores de casos de testes para conseguir a alteração requerida em tempo hábil.</p>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left"><a accesskey="p" href="qa-team-trackers.html"><img src="../../libs-common/images/prev.png" alt="Anterior" /></a> </td>
+          <td width="20%" align="center">
+            <a accesskey="u" href="qa.html">
+              <img src="../../libs-common/images/up.png" alt="Acima" />
+            </a>
+          </td>
+          <td width="40%" align="right"> <a accesskey="n" href="qa-team-communication.html"><img src="../../libs-common/images/next.png" alt="Próxima" /></a></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">Trabalhando com rastreadores </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="index.html">
+              <img src="../../libs-common/images/home.png" alt="Principal" />
+            </a>
+          </td>
+          <td width="40%" align="right" valign="top"> Comunicação com Testadores e Usuários</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

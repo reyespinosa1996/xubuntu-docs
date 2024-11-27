@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Teste de pacote e ISO</title>
+    <link rel="stylesheet" type="text/css" href="../../libs-common/css/style.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+    <link rel="home" href="index.html" title="Documentação de colaborador do Xubuntu" />
+    <link rel="up" href="qa-team-testing.html" title="Testes" />
+    <link rel="prev" href="qa-infra.html" title="Infraestrutura de teste" />
+    <link rel="next" href="qa-bugs.html" title="Lidando com bugs" />
+    <link rel="copyright" href="credits-license.html" title="Créditos e Licença" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="shortcut icon" href="../../libs-common/images/favicon.png" />
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="stylesheet" href="../../libs-common/css/style-resp-950.css" media="only screen and (max-width:950px)" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="stylesheet" href="../../libs-common/css/style-resp-400.css" media="only screen and (max-width:400px)" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" id="masthead">
+      <a href="index.html">
+        <img src="../../libs-common/images/logo.png" alt="Xubuntu" />
+      </a>
+    </div>
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h3 class="title"><a id="qa-testing"></a>Teste de pacote e ISO</h3>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-testing-iso"></a>ISOs</h4>
+            </div>
+          </div>
+        </div>
+        <p>Em geral,links para ISOs específicas para uso diário ou de marco podem ser encontradas em <a class="ulink" href="http://iso.qa.ubuntu.com/" target="_top">Rastreador de ISO</a>. Um link existe para a ISO de desenvolvimento diário <a class="ulink" href="http://cdimage.ubuntu.com/xubuntu/daily-live/current/" target="_top">atual</a>. Isso pode ser útil, especialmente quando estiver configurando métodos para testar suas ISOs,como em <a class="ulink" href="https://help.ubuntu.com/community/ZsyncCdImage" target="_top">zsync</a></p>
+        <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+          <table border="0" summary="Note">
+            <tr>
+              <td rowspan="2" align="center" valign="top" width="25">
+                <img alt="[Nota]" src="../../libs-common/images/note.png" />
+              </td>
+              <th align="left"></th>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <p>Você pode encontrar o último estado de instalação e inicialização conhecido de nossas ISOs em <a class="ulink" href="http://dev.xubuntu.org/#tab-qa" target="_top">Status do controle de qualidade</a>do rastreador de status de desenvolvimento</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-testing-exploratory"></a>Teste exploratório</h4>
+            </div>
+          </div>
+        </div>
+        <p>Além de testar as imagens e o software com ações de teste predefinidas (testes estáticos), os membros da comunidade também podem participar em testes exploratórios.</p>
+        <p>Em essência, testes exploratórios significa executar a versão de desenvolvimento e fazer suas tarefas diárias com o sistema e, finalmente, arquivar bugs quando você encontrá-los. Isso permite que o Xubuntu obtenha uma propagação muito maior do que é possível com testes pré-definidos.</p>
+        <p>Uma maneira útil de lidar com isso é dual (ou múltiplos) inicializações. Por meio de inicialização dupla (ou múltipla), você pode garantir que você possa acessar sempre a versão de trabalho ao testar o sistema de desenvolvimento. Desta forma, você pode fazer tanto trabalho na versão de desenvolvimento como é prático - enquanto procura por erros e regressões na versão de desenvolvimento.</p>
+        <p>Quando estiver fazendo dual(ou múltiplo boot) pode ser útil instalar o carregador de inicialização em partições específicas,uma simples leitura rápida abordando isso pode ser encontrada em <a class="ulink" href="https://wiki.xubuntu.org/qa/fine_tuning" target="_top">Partições manuais e localização do carregador de inicialização</a>.</p>
+        <p>As questões que a equipe de desenvolvimento está interessada em incluir incluem, além de problemas normalmente reportados, erros de usabilidade, ícones ausentes, funcionalidades inconsistentes.</p>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-testing-ppa"></a>Usando PPAs de desenvolvimento</h4>
+            </div>
+          </div>
+        </div>
+        <p>Nós temos 3 PPAs que usamos regularmente para testar pacotes. Esses são:</p>
+        <div class="itemizedlist">
+          <ul class="itemizedlist" style="list-style-type: disc; ">
+            <li class="listitem">
+              <p><a class="ulink" href="https://launchpad.net/~shimmerproject/+archive/ubuntu/daily" target="_top">Temas do Shimmer</a>Para builds diárias dos projetos do Projeto Shimmer</p>
+            </li>
+            <li class="listitem">
+              <p><a class="ulink" href="https://launchpad.net/~xubuntu-dev/+archive/ubuntu/ppa" target="_top">builds diárias do Xubuntu</a>para builds diárias Git e builds Bzr para pacotes relacionados ao Xubuntu e/ou Xfce4</p>
+            </li>
+            <li class="listitem">
+              <p><a class="ulink" href="https://launchpad.net/~xubuntu-dev/+archive/ubuntu/experimental" target="_top">Controle de qualidade experimental do Xubuntu</a>Para pacotes e versões de pacotes que estão sendo preparados para inclusão no Xubuntu, enviado para a conveniência de pessoas testando essas novas versões de pacotes e funções em um ambiente normalmente estável.</p>
+            </li>
+            <li class="listitem">
+              <p><a class="ulink" href="https://launchpad.net/~xubuntu-dev/+archive/ubuntu/staging" target="_top">Preparação do controle de qualidade do Xubuntu</a>Para testes de pacotes nas versões lançadas e atuais do Xubuntu</p>
+            </li>
+          </ul>
+        </div>
+        <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+          <table border="0" summary="Note">
+            <tr>
+              <td rowspan="2" align="center" valign="top" width="25">
+                <img alt="[Nota]" src="../../libs-common/images/note.png" />
+              </td>
+              <th align="left"></th>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <p>Às vezes, a equipe de desenvolvimento usa outros PPAs para testar pacotes específicos. Detalhes disso serão divulgados aos testadores quando apropriado.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p>Instalar a partir desses PPAs significa que você estará usando e testando pacotes com os quais os desenvolvedores estão trabalhando atualmente, isso quer dizer que as regressões encontradas por você não estarão presentes quando eles forem lançados.</p>
+        <p>Removendo um PPA em uso. O uso de ppa-purge provoca a desativação de uma lista de fontes PPA e, em seguida, altere os pacotes afetados de volta às versões padrão.</p>
+        <div class="itemizedlist">
+          <ul class="itemizedlist" style="list-style-type: disc; ">
+            <li class="listitem">
+              <p>Execute <strong class="userinput"><code>sudo apt-get install ppa-purge</code></strong></p>
+            </li>
+            <li class="listitem">
+              <p>Execute <strong class="userinput"><code>sudo ppa-purge ppa:ppaname</code></strong></p>
+            </li>
+          </ul>
+        </div>
+        <p>Relatando bugs com PPAs pode ser problemático, por favor veja mais informações sobre como relatar bugs com PPAs em <a class="xref" href="qa-bugs.html#qa-bugs-ppa">Reportando bugs com PPAs</a>.</p>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-testing-static"></a>Teste Estático</h4>
+            </div>
+          </div>
+        </div>
+        <p>Testar as versões de desenvolvimento do Xubuntu e de pacotes ajuda a manter a qualidade de cada dia. Se tiver recursos de hardware sobrando ou se for capaz de executar um ambiente de testes virtualizado,você pode ajudar.</p>
+        <p>Verifique a lista de e-mails quando o início do ciclo estiver perto, onde a decisão de quais semana(s) de testes nós participaremos será discutida.</p>
+        <p>Durante semanas de testes a ISO continuará a ser desenvolvida, a equipe de controle de qualidade do Xubuntu irá observar os relatórios do rastreador e alertar os testadores de problemas observados nos dias anteriores, Observações serão feitas no rastreador apropriado <a class="ulink" href="https://dev.xubuntu.org/#tab-qa" target="_top">página de Status do controle de qualidade</a>.</p>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-testing-milestone"></a>Testes Semanais</h4>
+            </div>
+          </div>
+        </div>
+        <p>Testes fixos da ISO só irão acontecer na Beta final, durante esse marco eles são úteis nos 2 dias anteriores ao lançamento para que o seguinte tenha acontecido.</p>
+        <div class="itemizedlist">
+          <ul class="itemizedlist" style="list-style-type: disc; ">
+            <li class="listitem">
+              <p>Sessão Live: Inicialize com a imagem e garanta que os testes básicos de aplicativos (abrir,fechar,salvar etc.) sejam aprovados.</p>
+            </li>
+            <li class="listitem">
+              <p>Testes de instalação exigiram aprovação. Esses testam apenas a instalação.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-testing-daily"></a>Testes Diários</h4>
+            </div>
+          </div>
+        </div>
+        <p>A importância de testes de imagens diárias reside principalmente em saber que regressões na inicialização e/ou instalação não apareceram. Quando aparentam ter aparecido, se você é capaz de inicialize com imagens de flavours diferentes, isso pode ajudar a comprovar um problema global ou local do Xubuntu. Se não tiver certeza contate a equipe Xubuntu, de preferência no IRC.</p>
+        <div class="itemizedlist">
+          <ul class="itemizedlist" style="list-style-type: disc; ">
+            <li class="listitem">
+              <p>Sessão Live: Inicialize com a imagem e garanta que os testes básicos de aplicativos (abrir,fechar,salvar etc.) sejam aprovados.</p>
+            </li>
+            <li class="listitem">
+              <p>Testes de instalação exigiram aprovação. Esses testam apenas a instalação.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-testing-upgrade"></a>Teste de Atualização</h4>
+            </div>
+          </div>
+        </div>
+        <p>Na metade do caminho de qualquer ciclo de desenvolvimento (em torno dos marcos da beta) precisamos testar atualizações de versões prévias para a nova versão de desenvolvimento. Quando a versão de desenvolvimento é destinada a ser a próxima versão LTS, nós precisaremos testar os dois caminhos de atualização, LTS para LTS e regular para LTS.</p>
+        <p>O rastreador de ISO possui uma seção para testes de atualização que não muda diariamente, mas é executada de sexta a sexta-feira. Isso nos permite testar atualizações por uma semana, em vez de um dia. Durante esses testes, é preferível que a imagem usada seja uma criada na primeira sexta-feira, exceto quando erros são relatados e as correções são emitidas.</p>
+        <div class="itemizedlist">
+          <ul class="itemizedlist" style="list-style-type: disc; ">
+            <li class="listitem">
+              <p>Atualização: testada usando o gerenciador de atualizações</p>
+            </li>
+            <li class="listitem">
+              <p>Atualização (imagem): testada usando a imagem diária</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-testing-package"></a>Teste de Pacote</h4>
+            </div>
+          </div>
+        </div>
+        <p>Para lançamentos onde estamos fazendo uso do Rastreador de Pacote,chamadas para testes de pacotes serão feitas na lista de e-mails  xubuntu-devel como requerido. Isso pode ser uma chamada do controle de qualidade ou dos desenvolvedores.</p>
+        <p>Um horário de testes planejados será enviado a lista de e-mails Xubuntu Devel perto do início do ciclo. Lembretes dos próximos requerimentos de testes de pacotes são enviadas a lista de e-mails Xubuntu devel como requerido. <span class="emphasis"><em>Requerimento para teste específico ao desenvolvedor</em></span>são enviados assim que disponíveis, muitas vezes esses pacotes serão encontrados em um de nossos PPAs.</p>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left"><a accesskey="p" href="qa-infra.html"><img src="../../libs-common/images/prev.png" alt="Anterior" /></a> </td>
+          <td width="20%" align="center">
+            <a accesskey="u" href="qa-team-testing.html">
+              <img src="../../libs-common/images/up.png" alt="Acima" />
+            </a>
+          </td>
+          <td width="40%" align="right"> <a accesskey="n" href="qa-bugs.html"><img src="../../libs-common/images/next.png" alt="Próxima" /></a></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">Infraestrutura de teste </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="index.html">
+              <img src="../../libs-common/images/home.png" alt="Principal" />
+            </a>
+          </td>
+          <td width="40%" align="right" valign="top"> Lidando com bugs</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

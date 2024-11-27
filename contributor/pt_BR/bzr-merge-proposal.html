@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Enviando propostas de mesclagem</title>
+    <link rel="stylesheet" type="text/css" href="../../libs-common/css/style.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+    <link rel="home" href="index.html" title="Documentação de colaborador do Xubuntu" />
+    <link rel="up" href="bzr.html" title="Usando Bazaar (Bzr)" />
+    <link rel="prev" href="bzr-push.html" title="Enviando por Push para repositórios Bzr" />
+    <link rel="next" href="git.html" title="Usando Git" />
+    <link rel="copyright" href="credits-license.html" title="Créditos e Licença" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="shortcut icon" href="../../libs-common/images/favicon.png" />
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="stylesheet" href="../../libs-common/css/style-resp-950.css" media="only screen and (max-width:950px)" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="stylesheet" href="../../libs-common/css/style-resp-400.css" media="only screen and (max-width:400px)" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" id="masthead">
+      <a href="index.html">
+        <img src="../../libs-common/images/logo.png" alt="Xubuntu" />
+      </a>
+    </div>
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h3 class="title"><a id="bzr-merge-proposal"></a>Enviando propostas de mesclagem</h3>
+          </div>
+        </div>
+      </div>
+      <p>Quando tiver movido suas alterações para uma branch pessoal,poderá querer propor que elas sejam mescladas na branch principal.</p>
+      <p>Para fazer um merge proposal(muitas vezes referido como MP) pelo navegador,comece abrindo a página Launchpad de sua branch. Pode encontrá-la indo na página <a class="ulink" href="https://code.launchpad.net/people/+me" target="_top">suas branches do Launchpad</a>e clicando na branch em questão. Agora,clique em <em class="guilabel">Propor a mesclagem</em>. Isto abrirá uma página que pedirá alguns detalhes no merge proposal que você está prestes a fazer.</p>
+      <p>O <em class="guilabel">Branch alvo</em>é normalmente definido corretamente por padrão,altere isso apenas se você souber que está errado.Se foi dito para adicionar um específico<em class="guilabel">Revisor</em>, adicione o revisor ao campo apropriado.Introduza um <em class="guilabel">Descrição</em>de sua alteração propositada também. Se estiver com dúvidas sobre qualquer uma das opções,pergunte ao revisor requisitado,se um não for especificado,pergunte no canal IRC.</p>
+      <p>Finalmente,clique em <span class="guibutton"><strong>Propor mesclagem</strong></span>.Isso irá enviar o seu merge proposal e tanto o dono da branch predestinada e os revisores especificados receberão um email.Se eles precisarem de outras informações ou que você trabalhe mais na branch,eles comentarão no merge proposal. Você receberá um email no momento que uma ação é tomada no merge proposal,incluindo quando for aprovado e mesclado na branch principal.</p>
+      <p>Para fazer um merge proposal pela linha de comando,usando a branch escolhida para o envio(a branch parente é o padrão) e o time de revisores padrão daquela branch,execute<strong class="userinput"><code>bzr lp-propose-merge</code></strong>.Isto irá abrir um editor de texto para inserir a descrição de sua alteração proposta. Você pode sobrepor o revisor padrão usando<code class="literal">--review NOME</code>um ou mais vezes,e vincular um reporte de bug ao merge proposal usando <code class="literal">--fixes lp:NÚMERODOBUG</code>.</p>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left"><a accesskey="p" href="bzr-push.html"><img src="../../libs-common/images/prev.png" alt="Anterior" /></a> </td>
+          <td width="20%" align="center">
+            <a accesskey="u" href="bzr.html">
+              <img src="../../libs-common/images/up.png" alt="Acima" />
+            </a>
+          </td>
+          <td width="40%" align="right"> <a accesskey="n" href="git.html"><img src="../../libs-common/images/next.png" alt="Próxima" /></a></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">Enviando por Push para repositórios Bzr </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="index.html">
+              <img src="../../libs-common/images/home.png" alt="Principal" />
+            </a>
+          </td>
+          <td width="40%" align="right" valign="top"> Usando Git</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

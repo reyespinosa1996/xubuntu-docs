@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Enviando por Push para repositórios Bzr</title>
+    <link rel="stylesheet" type="text/css" href="../../libs-common/css/style.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+    <link rel="home" href="index.html" title="Documentação de colaborador do Xubuntu" />
+    <link rel="up" href="bzr.html" title="Usando Bazaar (Bzr)" />
+    <link rel="prev" href="bzr-branch.html" title="Obtendo e atualizando branches do Bzr" />
+    <link rel="next" href="bzr-merge-proposal.html" title="Enviando propostas de mesclagem" />
+    <link rel="copyright" href="credits-license.html" title="Créditos e Licença" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="shortcut icon" href="../../libs-common/images/favicon.png" />
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="stylesheet" href="../../libs-common/css/style-resp-950.css" media="only screen and (max-width:950px)" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="stylesheet" href="../../libs-common/css/style-resp-400.css" media="only screen and (max-width:400px)" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" id="masthead">
+      <a href="index.html">
+        <img src="../../libs-common/images/logo.png" alt="Xubuntu" />
+      </a>
+    </div>
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h3 class="title"><a id="bzr-push"></a>Enviando por Push para repositórios Bzr</h3>
+          </div>
+        </div>
+      </div>
+      <p>Quando tiver trabalhado em suas alterações e quiser movê-las a uma branch remota, faça o seguinte na branch local:</p>
+      <div class="itemizedlist">
+        <ul class="itemizedlist" style="list-style-type: disc; ">
+          <li class="listitem">
+            <p>Para renomear ou mover arquivos, execute<strong class="userinput"><code>bzr mv ANTIGO NOVO</code></strong>. Isso ajudará manter o diff resultante significativo, e também funcionará após o fato.</p>
+          </li>
+          <li class="listitem">
+            <p>Se tiver adicionado arquivos, execute<strong class="userinput"><code>bzr add .</code></strong>na branch root. Isto iniciará o rastreio de quaisquer arquivos na filial que estão indeterminados no momento.</p>
+          </li>
+          <li class="listitem">
+            <p>Se tiver removido arquivos, execute<strong class="userinput"><code>bzr remove</code></strong>.Na maioria dos casos,isso deverá automaticamente parar o rastreio de arquivos que não estão mais na branch.</p>
+          </li>
+          <li class="listitem">
+            <p>Para verificar o estado da branch, execute <strong class="userinput"><code>bzr status</code></strong>.</p>
+          </li>
+          <li class="listitem">
+            <p>Faça o commit das suas alterações ao executar<strong class="userinput"><code>bzr commit</code></strong>.Isto irá abrir um editor de texto para inserir a mensagem de confirmação.</p>
+          </li>
+          <li class="listitem">
+            <p>Após ter feito um ou dois commits, execute<strong class="userinput"><code>bzr push LOCALIZAÇÃO</code></strong>para mover suas alterações a uma branch remota.</p>
+          </li>
+        </ul>
+      </div>
+      <p>A mensagem de commit deverá resumir todas as alterações que você fez após o último commit.Você pode especificá-la usando<code class="literal">-m MENSAGEM</code>,e vincular um reporte de bug ao commit usando <code class="literal">--fixes lp:NÚMERODOBUG</code>.</p>
+      <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+        <table border="0" summary="Note">
+          <tr>
+            <td rowspan="2" align="center" valign="top" width="25">
+              <img alt="[Nota]" src="../../libs-common/images/note.png" />
+            </td>
+            <th align="left"></th>
+          </tr>
+          <tr>
+            <td align="left" valign="top">
+              <p>Quando estiver trabalhando em uma branch e fazendo várias alterações que não são relacionadas umas as outras,é recomendado fazer vários commits. Isso ajuda manter o log de commits limpo e torna mais fácil a procura de qualquer problema que possa ter sido introduzido.</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+        <table border="0" summary="Note">
+          <tr>
+            <td rowspan="2" align="center" valign="top" width="25">
+              <img alt="[Nota]" src="../../libs-common/images/note.png" />
+            </td>
+            <th align="left"></th>
+          </tr>
+          <tr>
+            <td align="left" valign="top">
+              <p>Quando mover uma alteração para uma branch remota pela primeira vez, terá que especificar a localização da branch, Na maioria dos casos,ela irá seguir o formato <code class="literal"><span class="inline-icon-branch"><img src="../../libs-common/images/icon_branch.png" /></span>lp:~username/projectname/branchname</code>. Isso moverá o seu código para uma branch remota pessoal, Ao mover alterações repetidamente, você poderá omitir a localização da branch, já que Bzr terá salvo a localização mais recente na configuração da branch local.</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left"><a accesskey="p" href="bzr-branch.html"><img src="../../libs-common/images/prev.png" alt="Anterior" /></a> </td>
+          <td width="20%" align="center">
+            <a accesskey="u" href="bzr.html">
+              <img src="../../libs-common/images/up.png" alt="Acima" />
+            </a>
+          </td>
+          <td width="40%" align="right"> <a accesskey="n" href="bzr-merge-proposal.html"><img src="../../libs-common/images/next.png" alt="Próxima" /></a></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">Obtendo e atualizando branches do Bzr </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="index.html">
+              <img src="../../libs-common/images/home.png" alt="Principal" />
+            </a>
+          </td>
+          <td width="40%" align="right" valign="top"> Enviando propostas de mesclagem</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

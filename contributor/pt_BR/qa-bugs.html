@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Lidando com bugs</title>
+    <link rel="stylesheet" type="text/css" href="../../libs-common/css/style.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+    <link rel="home" href="index.html" title="Documentação de colaborador do Xubuntu" />
+    <link rel="up" href="qa-team-testing.html" title="Testes" />
+    <link rel="prev" href="qa-testing.html" title="Teste de pacote e ISO" />
+    <link rel="next" href="qa-team-trackers.html" title="Trabalhando com rastreadores" />
+    <link rel="copyright" href="credits-license.html" title="Créditos e Licença" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="shortcut icon" href="../../libs-common/images/favicon.png" />
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="stylesheet" href="../../libs-common/css/style-resp-950.css" media="only screen and (max-width:950px)" />
+    <link xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" rel="stylesheet" href="../../libs-common/css/style-resp-400.css" media="only screen and (max-width:400px)" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" id="masthead">
+      <a href="index.html">
+        <img src="../../libs-common/images/logo.png" alt="Xubuntu" />
+      </a>
+    </div>
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h3 class="title"><a id="qa-bugs"></a>Lidando com bugs</h3>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-bugs-tags"></a>Usando tags para reportar bugs do Xubuntu</h4>
+            </div>
+          </div>
+        </div>
+        <p>Para que possamos facilmente encontrar bugs do Xubuntu durante um ciclo de desenvolvimento, há algumas tags que você pode adicionar aos seus relatórios de bug. Nós assumimos que uma tag para o codinome do ciclo está incluída,caso não esteja por favor adicione uma.</p>
+        <div class="itemizedlist">
+          <ul class="itemizedlist" style="list-style-type: disc; ">
+            <li class="listitem">
+              <p>ppa: adicione esta tag quando tiver relatado um bug contra um pacote de um dos 3 PPAs de desenvolvimento</p>
+            </li>
+            <li class="listitem">
+              <p>usabilidade: adicione esta tag se o problema que você está relatando não é um bug comum, but um que pode ser considerado na lista de desejos,como seleções múltiplas de resultados da janela de resultados Catfish</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-bugs-reporting"></a>Reportando bug normal</h4>
+            </div>
+          </div>
+        </div>
+        <p>Qualquer um usando Xubuntu pode registrar (ou em outras palavras,relatar) bugs, mesmo tendo nenhuma experiência. Reportar bugs é importante pois em alguns casos, bugs podem passar despercebidos a menos que um usuário os registre.</p>
+        <p>Antes de enviar um bug, você deverá olhar em <a class="ulink" href="https://launchpad.net/ubuntu/+bugs" target="_top">reportes existentes de bugs</a>e nas notas de lançamento para verificar se o bug já não foi relatado. Se o bug já não foi relatado,você deve registrar um novo reporte de bug. É sensato ler <a class="ulink" href="https://help.ubuntu.com/community/ReportingBugs" target="_top">diretrizes de reporte de bugs</a>antes de registrar o seu primeiro bug.</p>
+        <p>Na maioria das situações,é mais fácil registrar um bug abrindo um terminal e digitando ubuntu-bug nome-pacote,onde nome-pacote é o pacote que você registrar um bug contra. Se não souber qual pacote você deve registrar um bug contra, refira-se ás instruções em <a class="ulink" href="https://wiki.ubuntu.com/Bugs/FindRightPackage" target="_top">Encontrando o pacote certo</a>.  Ao registrar o bug,é melhor ter informação demais do que pouca informação.</p>
+        <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+          <table border="0" summary="Note">
+            <tr>
+              <td rowspan="2" align="center" valign="top" width="25">
+                <img alt="[Nota]" src="../../libs-common/images/note.png" />
+              </td>
+              <th align="left"></th>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <p>Se não tiver certeza do nome de pacote a relatar, você pode usar o seu mouse para clicar na janela de aplicação; em um terminal execute <strong class="userinput"><code>ubuntu-bug -w</code></strong>, clique para fechar a mensagem de janela e então clique na janela da aplicação.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-bugs-ppa"></a>Reportando bugs com PPAs</h4>
+            </div>
+          </div>
+        </div>
+        <p>Quando encontrar um bug em um pacote de PPA. você precisará registrar o relato de bug manualmente. Quando tiver o nome do pacote faltoso, vá para <code class="literal">https://bugs.launchpad.net/ubuntu/+source/PACKAGENAME/+filebug</code>.</p>
+        <p>Registros de falhas do pacote podem ser encontrados em <code class="literal">/var/crash/</code>. Este diretório as vezes requer permissões administrador(<code class="literal">sudo</code>) para ver e extrair os conteúdos. Esses registros podem ser particularmente valiosos no seu relato de bug, mas tenha certeza de revisá-los pois podem conter material sensível ou pessoalmente identificável.</p>
+        <p>Tenha certeza de seguir as diretrizes gerais acima,e também adicione a tag ppa para tornar claro aos desenvolvedores que esse é um pacote não suportado.</p>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-bugs-triage"></a>Triagem de bugs</h4>
+            </div>
+          </div>
+        </div>
+        <p>Triagem de bugs é receber relatórios de bugs em um estado quando são úteis aos desenvolvedores por garantir que relatórious de bugs tenham títulos úteis, descrições, registros apropriados e mais. Para começar,leia a página <a class="ulink" href="https://wiki.ubuntu.com/Bugs/Triage" target="_top">triagem de bugs</a>da Ubuntu wiki.</p>
+        <p>Após familiarizar-se com os elementos da classificação de bugs, poderá iniciar a classificação <a class="ulink" href="https://bugs.launchpad.net/~xubuntu-bugs/+packagebugs" target="_top">Bugs do Xubuntu</a>. Favor observar que o status do bug e importância podem ser alterados apenas pelos membros da <a class="ulink" href="https://wiki.ubuntu.com/UbuntuBugControl" target="_top">Controle de Bugs do Xubuntu</a>equipe#8211  no início,você precisará relatar bugs classificados para a equipe em #ubuntu-bugs no Libera. Após demonstrar a sua habilidade de classificar bugs,você irá ganhar mais responsabilidades da equipe de Controle de Bugs.</p>
+        <p>Conforme você ganha experiência ao classificar bugs do Xubuntu, você pode querer dar uma olhada em novos bugs que mencionam o Xubuntu. Classificar novos bugs é recomendado aqueles que estão mais familiarizados com a classificação e o Xubuntu geralmente, já que nem todos os novos bugs mencionando Xubuntu são verdadeiramente bugs do Xubuntu.</p>
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h4 class="title"><a id="qa-bugs-upstream"></a>Encaminhando bugs ao upstream</h4>
+            </div>
+          </div>
+        </div>
+        <p>Quando bugs são encaminhados ao upstream, todos os usuários do software relevante se beneficiarão do trabalho de depuração,classificação,e correção feito pelos classificadores de bugs e desenvolvedores.</p>
+        <p>Ao ser determinado que um bug não é causado por uma alteração no Xubuntu, bugs podem ser encaminhados ao upstream de seus respectivos projetos para serem analisados. Por exemplo, todos os bugs apropriados do Xfce devem ser registrados no <a class="ulink" href="https://bugzilla.xfce.org/" target="_top">rastreador de bugs do Xfce</a>. Além disso, para rastrear o status de um bug no Ubuntu, o bug no Launchpad deve ser vinculado ao bug no upstream.</p>
+        <p>A Ubuntu Wiki tem uma página extensiva em <a class="ulink" href="https://wiki.ubuntu.com/Bugs/Upstream" target="_top">encaminhando bugs ao upstream</a> juntamente com instruções sobre como relatar bugs nos rastreadores de bug upstream. Informação detalhada na forma de como adicionar um bug do upstream no Launchpad pode ser encontrado na página <a class="ulink" href="https://wiki.ubuntu.com/Bugs/Watches" target="_top">Bugs/Vigias</a> da Ubuntu wiki.</p>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left"><a accesskey="p" href="qa-testing.html"><img src="../../libs-common/images/prev.png" alt="Anterior" /></a> </td>
+          <td width="20%" align="center">
+            <a accesskey="u" href="qa-team-testing.html">
+              <img src="../../libs-common/images/up.png" alt="Acima" />
+            </a>
+          </td>
+          <td width="40%" align="right"> <a accesskey="n" href="qa-team-trackers.html"><img src="../../libs-common/images/next.png" alt="Próxima" /></a></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">Teste de pacote e ISO </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="index.html">
+              <img src="../../libs-common/images/home.png" alt="Principal" />
+            </a>
+          </td>
+          <td width="40%" align="right" valign="top"> Trabalhando com rastreadores</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
